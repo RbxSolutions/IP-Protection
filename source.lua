@@ -9,10 +9,10 @@ IP_Trackers = {
 
 local old
 old = hookfunction(game.HttpGet, function(self, url)
+        -- Checking if the protection is enabled
     if type(url) == "string" and getgenv().IpProtection then
         -- Checks if the URL is in the IP_Trackers table
         if table.find(IP_Trackers, url) then
-            -- Checking if the protection is enabled
             warn(url,"tried to log your IP. It was protected.")
             return spoofedIP -- Spoofed IP
         end
