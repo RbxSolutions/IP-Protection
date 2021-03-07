@@ -4,6 +4,7 @@ spoofedIP = "0.0.0.0"
 
 IP_Trackers = {
     "https://v4.ident.me",
+    "https://api.ipify.org",
     "https://httpbin.org/get"
 }
 
