@@ -22,7 +22,7 @@ old = hookfunction(game.HttpGet, function(self, url)
 end)
 
 local oldSyn
-oldSyn = hookfunction(syn.request,function(a,b)
+oldSyn = hookfunction((syn and syn.request or request),function(a,b)
     if type(a) == "table" and getgenv().IpProtection then
         for i,v in pairs(a) do
             if i == "Url" and table.find(IP_Trackers, v) then
